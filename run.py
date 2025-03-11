@@ -53,6 +53,7 @@ def fixDF(o_table):
     return table
 
 def main():
+    # TODO: Total Debit and Total Credit missing from final output file 
     try:
         table = tabula.read_pdf(args.pdf_directory, pages='all', password=args.password, stream=True, multiple_tables=False)
         table = fixDF(table[0])
